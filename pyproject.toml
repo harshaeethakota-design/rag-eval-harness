@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rag-eval-harness"
+version = "0.1.0"
+description = "A tiny, zero-dependency harness for evaluating RAG pipelines: retrieval quality, answer faithfulness, and latency."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Harsha Eethakota" }]
+keywords = ["rag", "evaluation", "llm", "retrieval", "nlp"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
